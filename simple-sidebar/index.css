@@ -1,0 +1,53 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0px;
+    width: 250px;
+    height: 100%;
+    background-color: #2f3640;
+}
+
+.logo {
+    width: 250px;
+    position: relative;
+    top: 15px;
+    right: 5px;
+    margin-bottom: 10px;
+    padding: 2px 10px 5px -10px;
+    
+}
+
+.menu {
+    list-style: none;
+    padding: 20px;
+    /* margin: 10px 20px; */
+}
+
+.menu-item {
+    top: 0.5em;
+    bottom: 0.5em;
+    left: 1em;
+    right: 1em;
+    padding: 0.5em;
+    font: bold;
+    margin: 5px;
+    
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+ul li:hover {
+    background-color: #242a31;
+}
