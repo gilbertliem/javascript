@@ -1,0 +1,125 @@
+REACT: 
+
+React.createElement(a, b, c);
+ > use to create an element
+ > parameter a = describe what element ypu want to make
+ > parameter b = describe the props
+ > parameter c = describe what inside the element
+ <-- 
+    React.createElement('div', null, 'Hello World'); // null = none
+ -->
+ > to render more than one element, write the element inside a function, and render the function instead.
+ <--
+    function App() {
+        return React.createElement('div', null, 'Hello World');
+    }
+ 
+    ReactDOM.render(React.createElement(App), document.querySelector('#app');
+ -->
+
+ReactDOM.render(a, b)
+ > use to render the code
+ > parameter a = describe the thing you want to render out
+ > parameter b = describe the place you want to render the code
+<--
+    ReactDOM.render(React.createElement('div', null, 'Hello World'), document.querySelector('#app'));
+-->
+
+JSX code
+ > the code programmer use in React. in other word, JSX allow us to write html code inside javascript
+ > always put element(s) inside a parent div/tag. element(s) should be wrapped inside ONE div/tag
+ > we can use fragment (<> </>) instead of div or tag to wrap all element(s)
+<--
+    // opsi 1
+    function App() {
+        return (
+            <div>
+                <button>Click Me</button>
+                <p>Press the button.</p>
+            </div>
+        );
+    }
+    // opsi 2
+    const App = () => {
+        return (
+            <div>
+                <button>Click Me</button>
+                <p>Press the button.</p>
+            </div>
+        );
+    }
+
+    ReactDOM.render(<App/>, document.querySelector('#app')); // instead of writing React.createElement(App) inside the render, we can directly write <App/>
+-->
+ > always use className to give a class in JSX
+
+package.json
+ > should be installed before every project with whatever framework
+ > hold informations about the project (description)
+ > for any sending usage, just send this package.json file and run npm install from this file
+
+packagelock.json
+ > lock the version of the packages that we use
+
+node_modules
+ > hold all the libraries and packages that has been installed
+
+Babel
+ > useful to change JSX code into vanilla code
+
+webpack
+ > use to combine react codes, libraries and packages
+
+npx create-react-app (foldername)
+ > to install everything (settings, libraries, packages, etc.) needed to make a website/app project using react
+ > after finish installing, write cd (foldername) in the terminal to go to the folder and write npm start (similar with Live Server) to launch on website.
+
+props 
+ > use to pass data or function to another component (child component)
+ > we can only pass props one way, which is downwards(parent -> child)
+
+state
+ > a place (variabel) to save data. state has the ability to react to any changes and updates the browser/app
+ >!!variabels in react do not react to changes!!
+ > react will only be able to react changes in a state, not in variable.
+ > state is dependent on its component
+ > we can only pass state one way, which is downwards(parent -> child)
+
+useState
+ > the mandatory input if we want to use and change data inside the state (update data)
+<--
+    import React, { useState } from "react"
+
+    const [a, b] = useState('')
+-->
+ > ('') = location to put any data we want to use. if data N/A, just put the data type (object{}/string''/number0/array[]/etc.)
+ > [] = inside is 2 different things we get back from the useState
+ > a = the variabel of a state (name of the state)
+ > b = a function that allows us to change the state
+<--
+    const [text, setText] = useState('')
+
+    setText();
+--> 
+ > inside () on setText() is the place to put previous data from state / previous state
+
+useEffect
+ > run a function everytime a data in the state changes
+<--
+    import React, { useState, useEffect } from "react"
+-->
+<--
+    useEffect(() => {}, [])
+-->
+ > () => {} = first argument, 
+ > [todos] = second argument, function will run everytime todos (state) changes
+
+lifecycle
+ > 3 step=> mounting (componentDidMount), updating (componentDidUpdate), unmounting (componentWillUnmount) 
+
+ > baca state -> ubah state jadi props -> componentUpdate -> render
+
+
+<--
+-->
+
